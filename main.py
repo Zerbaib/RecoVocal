@@ -79,7 +79,7 @@ try:
                 data = q.get()
                 if rec.AcceptWaveform(data):
                     parler = json.loads(rec.FinalResult())
-                    print(parler['text'])
+                    print("\033[1;32;40m" + parler['text'] + "\033[0m")
                     intr.interpret(parler['text'])
                 
                 if dump_fn is not None:
