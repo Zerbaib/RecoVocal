@@ -9,23 +9,15 @@ class interpreter(start):
     def interpret(self, data):
         data = data
         #print(data.find('framboises'))
-        if data.find('framboises') >= 0:
-            print("Oui")
+        if data.find('bonjour') >= 0:
+            print("Bonjour !")
+            print("Que pui-je faire pour toi ?")
+
+        if data.find("ouvre") >= 0 and data.find("discord") >= 0:
+            print("J ouvre Discord")
+            self.start.action("discord")
+
         if data.find('allume') >= 0 and data.find('rouge') >= 0:
             print("J allume la rouge")
             self.start.action("red on")
-        if data.find('eteint') >= 0 and data.find('rouge') >= 0:
-            print("J eteint la rouge")
-            self.start.action("red off")
-        if data.find('allume') >= 0 and data.find('verte') >= 0:
-            print("J allume la verte")
-            self.start.action("green on")
-        if data.find('eteint') >= 0 and data.find('verte') >= 0:
-            print("J eteint la verte")
-            self.start.action("green off")
-        if data.find('allume') >= 0 and data.find('bleu') >= 0:
-            print("J allume la bleu")
-            self.start.action("blue on")
-        if data.find('eteint') >= 0 and data.find('bleu') >= 0:
-            print("J eteint la bleu")
-            self.start.action("blue off")
+

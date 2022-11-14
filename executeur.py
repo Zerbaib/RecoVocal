@@ -3,8 +3,8 @@ import os
 class start:
     def action(self, data):
         data = data
-        if data == "red on":
-            #gp.output(16, gp.HIGH)
+        if data == "discord":
+            os.system(r"C:\Users\nikam\AppData\Local\Discord\Update.exe")
             print()
         if data == "red off":
             print()
