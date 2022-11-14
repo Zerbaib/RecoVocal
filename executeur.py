@@ -4,15 +4,18 @@ class start:
     def action(self, data):
         data = data
         if data == "discord":
-            os.system(r"C:\Users\nikam\AppData\Local\Discord\Update.exe")
+            os.system(r"start C:\Users\nikam\AppData\Local\Discord\app-1.0.9007\Discord.exe")
             print()
-        if data == "red off":
+        if data == "youtube":
+            os.system("start https://youtube.com")
             print()
             #gp.output(16, gp.LOW)
-        if data == "green on":
+        if data == "meteo":
+            os.system("start https://search.brave.com/search?q=meteo&source=desktop")
             print()
             #gp.output(20, gp.HIGH)
-        if data == "green off":
+        if data == "clear":
+            os.system("cls")
             print()
             #gp.output(20, gp.LOW)
         if data == "blue on":

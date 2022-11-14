@@ -17,7 +17,13 @@ class interpreter(start):
             print("J ouvre Discord")
             self.start.action("discord")
 
-        if data.find('allume') >= 0 and data.find('rouge') >= 0:
-            print("J allume la rouge")
-            self.start.action("red on")
+        if data.find('ouvre') >= 0 and data.find('youtube') >= 0:
+            print("J ouvre youtube")
+            self.start.action("youtube")
 
+        if data.find('quoi') >= 0 and data.find('temps') >= 0:
+            print("Voila la meteo")
+            self.start.action("meteo")
+
+        if data.find('clear') >= 0:
+            self.start.action('clear')
