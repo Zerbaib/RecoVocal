@@ -18,7 +18,8 @@ class start:
             os.system("cls")
             print()
             #gp.output(20, gp.LOW)
-        if data == "blue on":
+        if data == "spotify":
+            os.system("start spotify")
             print()
             #gp.output(21, gp.HIGH)
         if data == "blue off":

@@ -20,8 +20,12 @@ class interpreter(start):
         if data.find('ouvre') >= 0 and data.find('youtube') >= 0:
             print("J ouvre youtube")
             self.start.action("youtube")
+        
+        if data.find('ouvre') >= 0 and data.find('spotify') >= 0:
+            print("J ouvre spotify")
+            self.start.action("spotify")
 
-        if data.find('quoi') >= 0 and data.find('temps') >= 0:
+        if data.find("quel") >= 0 and data.find('temps') >= 0:
             print("Voila la meteo")
             self.start.action("meteo")
 
