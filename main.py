@@ -63,11 +63,7 @@ try:
 
     model = vosk.Model(args.model)
 
-    if args.filename:
-        dump_fn = open(args.filename, "wb")
-    else:
-        dump_fn = None
-
+    dump_fn = open(args.filename, "wb") if args.filename else None
     with sd.RawInputStream(samplerate=args.samplerate, blocksize = 8000, device=args.device, dtype='int16',
                             channels=1, callback=callback):
             print('#' * 80)
@@ -81,7 +77,7 @@ try:
                     parler = json.loads(rec.FinalResult())
                     print("\033[1;32;40m" + parler['text'] + "\033[0m")
                     intr.interpret(parler['text'])
-                
+
                 if dump_fn is not None:
                     dump_fn.write(data)
 
@@ -89,4 +85,4 @@ except KeyboardInterrupt:
     print('\nDone')
     parser.exit(0)
 except Exception as e:
-    parser.exit(type(e).__name__ + ': ' + str(e))
+    parser.exit(f'{type(e).__name__}: {str(e)}')
